@@ -2,8 +2,8 @@ const task = require("./activity.js");
 const Calculator = require("./calculator.js");
 
 describe("String Functions", () => {
-  test("string length should equal to 5", () => {
-    expect(stringLength("hello")).toEqual(5);
+  test("string length should equal to 10", () => {
+    expect(stringLength("microverse")).toEqual(10);
   });
 
   test("throw error if string is empty or > 10", () => {
@@ -12,34 +12,34 @@ describe("String Functions", () => {
     }).toThrow("String length must be between 1-10");
 
     expect(() => {
-      stringLength("abracadabra");
+      stringLength("motivational");
     }).toThrow("String length must be between 1-10");
   });
 
-  test("should return olleh as a reverse string", () => {
-    expect(reverseString("hello")).toEqual("olleh");
+  test("should return esrevorcim as a reverse string", () => {
+    expect(reverseString("microverse")).toEqual("esrevorcim");
   });
 
-  test("should return olleh as a reverse string", () => {
+  test("should return esrevorcim as a reverse string", () => {
     expect(() => {
       reverseString(0);
     }).toThrow("Not a string");
   });
 
-  test("should return Hello for capitalize()", () => {
-    expect(capitalize("hello")).toEqual("Hello");
+  test("should return microverse for capitalize()", () => {
+    expect(capitalize("microverse")).toEqual("Microverse");
   });
 
-  test("should return hEllo as a reverse string", () => {
+  test("should return microverse as a reverse string", () => {
     expect(() => {
-      capitalize(3);
+      capitalize(1);
     }).toThrow("Not a string");
   });
 });
 
 describe("Calculator Functions", () => {
   const calc = new Calculator();
-  test("should throw error if no argumnet is passed", () => {
+  test("should throw error if no argument is passed", () => {
     expect(() => {
       calc.add();
     }).toThrow();
